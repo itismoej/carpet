@@ -6,7 +6,7 @@ from carpet_funcs import arr_to_img, img_to_arr, img_mult
 
 UPLOAD_FOLDER = '/home/mohammad/Desktop/stuff/stuff3/carpet/carpet/static/uploads'
 STATIC_FOLDER = '/home/mohammad/Desktop/stuff/stuff3/carpet/carpet/static'
-ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'py'}
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
 app = Flask(__name__, static_url_path='/static')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER

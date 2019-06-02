@@ -14,7 +14,7 @@ def img_to_arr(path):
 	if width != 300 or height != 400:
 		img = img.resize((300,400))
 
-	return np.array(img)
+	return np.array(img, 'uint8')
 
 
 def arr_to_img(arr):
@@ -31,7 +31,12 @@ def img_mult(matrixa, matrixb):
 	Multiply two given matrices into eachother
 	'''
 
-	ans = matrixa.copy()
+	ans = np.zeros((400,300))
+
+	matrixa = matrixa.tolist()
+	matrixb = matrixb.tolist()
+	ans = ans.tolist()
+
 
 	print(len(matrixa))
 	for i in range(len(matrixa)):
@@ -41,4 +46,4 @@ def img_mult(matrixa, matrixb):
 			b = matrixa[i][j][2] * matrixb[i][j][2]
 			ans[i][j] = (r%256,g%256,b%256)
 
-	return ans
+	return np.array(ans, 'uint8')
