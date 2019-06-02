@@ -1,0 +1,16 @@
+<!doctype html>
+<title>Buy</title>
+<h1>Buy Carpet</h1>
+<form method="post" enctype="multipart/form-data">
+    <p>Your Budget: <input type="number" step="1" min="100" max="100000" name="price" />
+    <input type="submit" value="Buy">
+</form>
+
+{% if carpet_list %}
+    <br /><hr />
+    <p>Maxmimum number carpets you can buy is: {{ max_number }}
+    <br />
+    {% for elem, price in carpet_list %}
+        <p><img src={{ elem }} style="margin-right:20px;"/>{{ price }}
+    {% endfor %}
+{% endif %}
