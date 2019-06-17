@@ -6,11 +6,26 @@
     <input type="submit" value="Buy">
 </form>
 
+
 {% if carpet_list %}
     <br /><hr />
-    <p>Maxmimum number carpets you can buy is: {{ max_number }}
+    <h3>Maxmimum number carpets you can buy is: {{ carpet_list|length }}</h3>
     <br />
+
     {% for elem, price in carpet_list %}
-        <p><img src={{ elem }} style="margin-right:20px;"/>{{ price }}
+        {% if loop.index0%3 == 0 %}
+            <div style="display: flex;">
+        {% endif %}
+    
+        <div style="flex: 33.33%; padding: 5px; text-align: center" id="#pic{{ loop.index }}" >
+            <img src={{ elem }} height="400" width="300" alt="image">
+            <h3>price: </h3>
+            <p>{{ price }}</p>
+        </div>
+    
+        {% if loop.index0%3 == 2 %}
+            </div><br />
+        {% endif %}
     {% endfor %}
+    </div>
 {% endif %}

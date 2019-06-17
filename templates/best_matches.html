@@ -1,6 +1,13 @@
 <!doctype html>
 <title>Search</title>
 <h1>Find Three Best Matches</h1>
-{% for source in best_matches %}
-  <img src={{ source }} style="margin-right:20px;" />
-{% endfor %}
+<div>
+<div style="display: flex;">
+  {% for source in best_matches %}
+    <div style="flex: 33.33%; padding: 5px; text-align: center" id="#pic{{ loop.index }}" >
+      <img src={{ source }} style="margin-right:20px;" />
+      <h3>image number {{loop.index}}</h3>
+    </div>
+  {% endfor %}
+</div>
+</div>

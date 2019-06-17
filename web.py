@@ -112,7 +112,6 @@ def search_by_img():
                                 '/home/mohammad/Desktop/stuff/stuff3/carpet/carpet/static/outputs'
                             )
 
-        print(best_matches)
         return render_template('best_matches.html', best_matches=best_matches)
 
 
@@ -126,13 +125,9 @@ def buy():
             return redirect(request.url)
 
         budget = int(request.form['price'])
-        # carpet_list, prices, max_number = shop_seeker(budget)
-        carpet_list, max_number = shop_seeker(budget)
+        carpet_list = shop_seeker(budget)
 
-        print('\n\n\n\nHEREEEEEEEEEE')
-        print(carpet_list)
-        # return render_template('buy.html', carpet_list=carpet_list, prices=prices, max_number=max_number)
-        return render_template('buy.html', carpet_list=carpet_list, max_number=max_number)
+        return render_template('buy.html', carpet_list=carpet_list)
 
     return render_template('buy.html')
 

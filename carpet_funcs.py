@@ -112,7 +112,7 @@ def shop_seeker(budget):
 	sum_temp = 0
 	carpet_counter = 0
 
-	maxmimum_number = 0
+	# maxmimum_number = 0
 
 	carpet_list = list()
 	prices = list()
@@ -123,8 +123,8 @@ def shop_seeker(budget):
 		if price_list[i][1] > budget:
 			continue
 
-		if (sum_temp + int(price_list[i][1])) < budget:
-			maxmimum_number += 1
+		# if (sum_temp + int(price_list[i][1])) < budget:
+		# 	maxmimum_number += 1
 
 
 		sum_temp += price_list[i][1]
@@ -139,4 +139,4 @@ def shop_seeker(budget):
 		# )
 
 	# return carpet_list, prices, maxmimum_number
-	return carpet_list, maxmimum_number
+	return carpet_list
