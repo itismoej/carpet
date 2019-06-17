@@ -20,14 +20,14 @@ Go to ```backup.py```, change the inputs and run this command in terminal:
 python backup.py
 ```
 
-### Section Three (Colorize Graph)
+### Section Three (Search)
 Go to ```localhost:5000/search``` and choose your image.
 Don't forget to run your flask project:
 ```
 python web.py
 ```
 
-### Section Four (Colorize Graph)
+### Section Four (Buy)
 Go to ```localhost:5000/buy```, enter your budget.
 Don't forget to run your flask project:
 ```
