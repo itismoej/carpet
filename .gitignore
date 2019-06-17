@@ -108,3 +108,6 @@ venv.bak/
 *.jpeg
 *.png
 *.gif
+
+# vscode
+.vscode/
