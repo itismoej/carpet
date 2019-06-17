@@ -27,7 +27,7 @@ Don't forget to run your flask project:
 python web.py
 ```
 
-### Section Three (Colorize Graph)
+### Section Four (Colorize Graph)
 Go to ```localhost:5000/buy```, enter your budget.
 Don't forget to run your flask project:
 ```
